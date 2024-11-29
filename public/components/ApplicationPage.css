@@ -1,0 +1,155 @@
+/* ApplicationPage.css */
+body {
+    font-family: 'Arial', sans-serif;
+     /* Replace with the relevant image URL */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #4A90E2;
+    margin-top: 50px;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+h2 {
+    text-align: center;
+    color: #555;
+    margin-top: 30px;
+    font-size: 1.8em;
+}
+
+img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+button {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+h2, .dropdown, .company-card {
+    padding: 15px;
+    margin: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-card {
+    width: 250px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin: 15px;
+    padding: 15px;
+    transition: transform 0.2s ease;
+}
+
+.company-card:hover {
+    transform: translateY(-10px);
+}
+
+.company-card p {
+    font-size: 1em;
+    margin: 8px 0;
+}
+
+.dropdown {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(4, 4, 4, 0.1);
+    border-radius: 5px;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    padding: 10px;
+}
+
+.dropdown button {
+    background-color: #f3f3f3;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.dropdown button:hover {
+    background-color: #f0f0f0;
+}
+
+button:focus {
+    outline: none;
+}
+
+button {
+    border: none;
+}
+
+button {
+    background-color: #4A90E2;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+.back-button {
+    background-color: #A3A3A3;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #8B8B8B;
+}
+
+p {
+    color: #333;
+    font-size: 1.1em;
+    text-align: center;
+}

@@ -1,0 +1,85 @@
+.dashboard {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.dashboard-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #3e3939;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 15px rgba(6, 5, 5, 0.15);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card a {
+    display: block;
+    margin-top: 20px;
+    color: #0a0909;
+    background-color: #ff7e00;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    background-color: #ff9e00;
+}
+
+.dropdown {
+    position: absolute;
+    top: 70px; /* Adjust based on your layout */
+    left: 10px; /* Align with the logo */
+    background-color: rgb(0, 0, 0);
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100; /* Make sure dropdown appears above other elements */
+}
+
+.dropdown button {
+    display: block;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%; /* Full width */
+}
+
+.dropdown button:hover {
+    background-color: #312e2e; /* Change color on hover */
+}
