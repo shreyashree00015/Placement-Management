@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import vpsLogo from './images/vps.png';
 
 const StudentDetails = () => {
     const [students, setStudents] = useState([]);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
     const [newStudent, setNewStudent] = useState({
         registrationNumber: '',
         name: '',
@@ -13,7 +15,7 @@ const StudentDetails = () => {
         twelfthPercent: '',
         standingArrears: ''
     });
-    const [editStudent, setEditStudent] = useState(null); // To store student being edited
+    const [editStudent, setEditStudent] = useState(null);
     const navigate = useNavigate();
 
     const fetchStudents = async () => {
@@ -27,6 +29,14 @@ const StudentDetails = () => {
         } catch (error) {
             console.error('Error fetching students:', error);
         }
+    };
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    };
+
+    const handleLogout = () => {
+        navigate('/'); // Navigate to the login page
     };
 
     useEffect(() => {
@@ -89,6 +99,26 @@ const StudentDetails = () => {
 
     return (
         <div>
+            <img 
+                src={vpsLogo} 
+                alt="Logo"
+                style={{
+                    position: 'absolute',
+                    top: '10px',
+                    left: '10px',
+                    width: '50px',
+                    height: '50px',
+                    cursor: 'pointer'
+                }}
+                onClick={toggleDropdown}
+            />
+            {dropdownOpen && (
+                <div className="dropdown">
+                    <button onClick={() => navigate('/admin-dashboard')}>Home</button>
+                    <button onClick={handleLogout}>Logout</button>
+                </div>
+            )}
+            <h1> - </h1>
             <h2>Student Details Page</h2>
 
             {/* Add New Student Form */}
@@ -220,20 +250,15 @@ const StudentDetails = () => {
                                 <td style={thTdStyle}>{student.standingArrears}</td>
                                 <td style={thTdStyle}>
                                     <button onClick={() => setEditStudent(student)}>Edit</button>
-                                    <button onClick={() => handleDeleteStudent(student._id)} style={{ marginLeft: '10px' }}>Delete</button>
+                                    <button onClick={() => handleDeleteStudent(student._id)}>Delete</button>
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
             ) : (
-                <p>No students found</p>
+                <p>No students found.</p>
             )}
-
-            {/* Back Button to go to AdminDashboard */}
-            <button onClick={() => navigate('/admin-dashboard')} style={{ marginTop: '20px', padding: '10px 20px' }}>
-                Back to Admin Dashboard
-            </button>
         </div>
     );
 };

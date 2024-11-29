@@ -1,0 +1,134 @@
+/* CompanyDetails.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Page headings */
+  h2, h3 {
+    color: #004080; /* Dark blue for headings */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styling */
+  form {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray form background */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  form h3 {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  form input {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #003366;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  thead th {
+    background-color: #004080;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  tbody td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:hover {
+    background-color: #e6f7ff;
+  }
+  
+  button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #cc0000;
+  }
+  
+  button[onClick^="navigate"] {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  button[onClick^="navigate"]:hover {
+    background-color: #003366;
+  }
+  
+  /* Utility for spacing */
+  .mt-20 {
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,102 @@
+/* JobPage.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 30px;
+    font-size: 28px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+}
+
+.dropdown button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.dropdown button:hover {
+    background-color: #ffffff;
+}
+
+.job-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.job-card {
+    flex: 1 1 30%;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.job-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.job-card strong {
+    color: #2c3e50;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+}
+
+img[alt="Logo"] {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}

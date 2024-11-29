@@ -1,0 +1,152 @@
+/* Profile.css */
+
+.profile {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.profile h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.profile img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.dropdown button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.dropdown button:hover {
+    background-color: #2980b9;
+}
+
+.profile-details p {
+    font-size: 16px;
+    color: #555;
+    margin: 8px 0;
+}
+
+.profile-details label p {
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.profile-details input[type="text"],
+.profile-details input[type="email"],
+.profile-details input[type="date"],
+.profile-details input[type="url"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-top: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+}
+
+.profile-details input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.profile-details button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.profile-details button:hover {
+    background-color: #2980b9;
+}
+
+.profile .error {
+    color: red;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.password-strength {
+    height: 5px;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+.password-strength p {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.password-strength p.weak {
+    color: red;
+}
+
+.password-strength p.medium {
+    color: orange;
+}
+
+.password-strength p.strong {
+    color: green;
+}
+
+button:focus,
+input:focus {
+    outline: none;
+}
+
+button.back-button {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #bdc3c7;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+button.back-button:hover {
+    background-color: #bdc3c7;
+    color: #2c3e50;
+}

@@ -2,6 +2,9 @@ const express = require('express');
 const router = express.Router();
 const Company = require('../models/companyModel');
 const Student = require('../models/Student');
+const RegisteredLogins = require('../models/RegisteredLogins'); // Import your RegisteredLogins model
+// const bcrypt = require('bcrypt');
+
 
 // Get list of companies
 router.get('/companies', async (req, res) => {
@@ -130,5 +133,40 @@ router.get('/company/:id', async (req, res) => {
     res.status(500).json({ message: 'Server Error' });
   }
 });
+
+
+router.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  console.log('Login request:', req.body); // Log incoming request
+
+  try {
+      // Check for user by registration number
+      const user = await RegisteredLogins.findOne({ registrationNumber: username });
+      console.log('User found:', user); // Log the user found
+
+      if (user && user.password === password) {
+          return res.json({ success: true });
+      } else {
+          return res.json({ success: false });
+      }
+  } catch (error) {
+      console.error('Error during login:', error);
+      return res.status(500).json({ success: false, message: 'Server Error' });
+  }
+});
+
+// Add this to adminRoutes.js for testing
+router.get('/test-users', async (req, res) => {
+  try {
+      const users = await RegisteredLogins.find();
+      console.log('Users in RegisteredLogins:', users); // Log users to console
+      res.json(users); // Return users in response
+  } catch (error) {
+      console.error('Error fetching users:', error);
+      res.status(500).json({ message: 'Server Error' });
+  }
+});
+
 
 module.exports = router;
